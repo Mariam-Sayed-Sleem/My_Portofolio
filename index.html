@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> My Profile </title>
-        <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=wd8b8EcHY1y4&format=png&color=000000">
+        <title> about me </title>
+        <link rel="icon" type="image/png" href="https://img.icons8.com/liquid-glass/48/apple-music.png">
         <style>
             @font-face {
                     font-family: 'Starborn'; 
@@ -13,27 +13,23 @@
                     src: url(Your-Star.ttf);
             }
             
+            body{
+                    background-image: url("Blue_pink.jpeg");
+                    background-attachment: fixed;
+                    background-size: cover;
+                    background-position: center;
+                }
             * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
             }
-
-            body {
-                background-image: url("Blue_pink.jpeg");
-                background-size: cover;        
-                background-position: center;
-                display: flex;
-
-            }
-            
             .page-container {
                 display: flex;
                 flex-direction: column;
                 min-height: 100vh;
                 width: 100%;
             }
-            
             .header {
                 text-align: center;
                 margin: 30px auto 20px auto;
@@ -44,35 +40,34 @@
                 flex-direction: column;
                 padding: 0 20px;
             }
-            
+        
             .smooth-box {
+                position: fixed;
+                top: 30px;
+                left: 50%;
+                transform: translateX(-50%);
                 width: auto;
                 min-width: 320px;
-                max-width: 90%;
                 height: auto;
-                border-radius: 30px; 
+                border-radius: 60px;
                 background: linear-gradient(135deg, #5f99bd 0%, #4a7ea0 100%);
                 border: 3px solid #dcecff;
                 padding: 16px 40px;
-                display: inline-flex;
+                display: flex;
                 align-items: center;
                 justify-content: center;
-                text-align: center;
-                box-sizing: border-box;
+                z-index: 1000;
                 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-                backdrop-filter: blur(2px);
-                transition: all 0.3s ease;
             }
-            
             .smooth-box:hover {
-                transform: scale(1.02);
+                transform: translateX(-50%) scale(1.02);
                 border-color: #ffdefd;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
             }
             
             .float {
                 display: flex;
-                gap: 80px;
+                gap: 70px;
                 font-family: 'Starborn', sans-serif;
                 text-decoration: none;
                 color: white;
@@ -96,128 +91,196 @@
                 display: inline-block;
                 position: relative;
             }
-            
             .float a.active {
                 color: #ffffff;
                 text-shadow: 0 0 8px #ffdefd, 0 0 3px rgba(255,255,255,0.8);
                 font-weight: bold;
             }
-            
             .float a:hover {
-                color: #58eefc;
+                color: #32e3e3;
                 text-shadow: 0 0 12px #32e3e3;
                 transform: translateY(-2px);
             }
-            
+            h1{
+                color: white
+
+            }
+            h2{
+                color: white
+            }
+            h3{
+                color: white
+            }
+            h4{
+                color: white
+            }
+            h5{
+                color: white
+            }
+            h6{
+                color: white
+            }
+            img {
+                    max-width: 200%;
+                    height: auto;
+                    align-items: center;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+            }
+            a:link {
+                        color: #c7e9ff;
+                        text-align: center;
+                        text-decoration: none;
+            }
+            a:visited {
+                color: #c7e9ff;
+            }
+            a:hover {
+                color: #ffdefd;
+            }
+            .float {
+                display: flex;
+                gap: 80px;
+                font-family: 'Starborn';
+                text-decoration: none;
+                color: white;
+            }
+            .float a.active {color: #ffffff;}
             .main {
-                flex: 1;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 100px;
-                flex-wrap: wrap;
-                padding: 40px 20px 60px 20px;
-                margin-top: 0px;
+                gap: 80px;
+                height: 100vh;
+                padding-top: 140px;
             }
-            
-            .miku-left {
-                width: 300px;
-                height: 300px;
-                object-fit: contain;
-                animation: flipANDbeam2 2s ease-in-out infinite;  
-                animation-delay: .5s;
-                filter: drop-shadow(0 8px 12px rgba(0,0,0,0.2));
+            .navigation {
+                    text-align: center;
+                    padding: 40px 0 20px 0;
             }
-            
-            .miku-left:hover{
-                animation: Shreikleft 1s ease-in-out infinite;
-            }
-            
-            @keyframes flipANDbeam2 {
-                0%   { transform: translateY(0) rotateY(0deg); }
-                25%  { transform: translateY(-45px) rotateY(-90deg); }
-                50%  { transform: translateY(0) rotateY(-180deg); }
-                75%  { transform: translateY(-45px) rotateY(-270deg); }
-                100% { transform: translateY(0) rotateY(-360deg); }
-            }
-            
-            @keyframes Shreikleft {
-                0%   { transform: translateX(0) rotateY(0deg);}
-                30%  { transform: rotateY(180deg);}
-                35% { transform: translateX(-500px) rotateY(180deg);}
-                100% { transform: translateX(0) rotateY(0deg);}
-            }
-            
-            .miku-right {
-                width: 300px;
-                height: 300px;
-                object-fit: contain;
-                animation: flipAndBeam 2s ease-in-out infinite;
-                filter: drop-shadow(0 8px 12px rgba(0,0,0,0.2));
-            }
-            
-            .miku-right:hover{
-                animation: Shreikright 1s ease-in-out infinite;
-            }
-            
-            @keyframes Shreikright {
-                0%   { transform: translateX(0) rotateY(0deg);}
-                30%  { transform: rotateY(180deg);}
-                35% { transform: translateX(500px) rotateY(180deg);}
-                100% { transform: translateX(0) rotateY(0deg);}
-            }
-            
-            @keyframes flipAndBeam {
-                0%   { transform: translateY(0) rotateY(0deg); }
-                25%  { transform: translateY(-45px) rotateY(90deg); }
-                50%  { transform: translateY(0) rotateY(180deg); }
-                75%  { transform: translateY(-45px) rotateY(270deg); }
-                100% { transform: translateY(0) rotateY(360deg); }
-            }
-            
-            .profile {
-                width: 250px;
-                height: 250px;
-                object-fit: cover;
-            }
-            
-            .profile:hover {
-                transform: rotateX(360deg) rotateY(180deg) scale(1.3);
-                transition: 1.2s;
-            }
-            
-            .footer {
-                background: rgba(75, 123, 172, 0.96);
+            .navigation a {
                 color: white;
-                text-align: center;
-                padding: 40px 20px 40px 20px;
-                border-top: 5px solid #dcecff;
+                text-decoration: none;
+                font-size: 24px;
+                margin: 0 30px;
+                transition: 0.3s;
+            }
+            .navigation a:hover {
+                color: #66d8ea;
+            }
+            .gal {
+                position: absolute;
+                bottom: 20%;
                 width: 100%;
-                margin-top: auto;
-                box-sizing: border-box;
-                backdrop-filter: blur(1px);
-                box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
             }
-            
-            .footer h2 {
-                font-family: 'Starborn', cursive;
-                font-size: 1.8rem;
-                letter-spacing: 1px;
-                margin-bottom: 10px;
+            .main-content {
+                padding-top: 140px;
+                padding-bottom: 100px;
+            }
+            .cards {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 40px;
+                list-style: none;
+                margin: 0 auto;
+                max-width: 1400px;
+                padding: 0 20px;
+            }
+            .card {
+                width: 280px;
+                background: rgba(66, 126, 187, 0.95);
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+                transition: all 0.4s ease;
+                border: 3px solid #dcecff;
+            }
+            .card:hover {
+                transform: translateY(-20px) scale(1.05);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            }
+            .card img {
+                width: 100%;
+                height: 280px;
+                object-fit: cover;
+                display: block;
+            }
+            .card-content {
+                padding: 20px;
+                text-align: center;
+            }
+            .card-content h3 {
+                margin: 10px 0 8px 0;
+                font-size: 24px;
                 color: white;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-                font-weight: normal;
+                font-family: "Starborn";
             }
-            
-            .footer h3 {
+            .card-content p {
+                margin: 0;
+                font-size: 15px;
+                font-family: "Your-Star";
+                color: #c7e9ff;
+                line-height: 1.5;
+                opacity: 0.9;
+            }
+            .ABout-Me-con {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 100px auto 40px auto;
+                padding: 0 20px;
+            }
+            .about-me-box {
+                background: rgba(95, 153, 189, 0.85);
+                backdrop-filter: blur(12px);
+                border-radius: 40px;
+                padding: 40px 50px;
+                max-width: 800px;
+                width: 90%;
+                border: 3px solid #dcecff;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                transition: all 0.4s ease;
+                text-align: center;
+                animation: fadeInUp 0.8s ease-out;
+            }
+            @keyframes fadeInUp {
+                from {opacity: 0; transform: translateY(30px);}
+                to {opacity: 1; transform: translateY(0);}
+            }
+            .about-me-box:hover {
+                transform: translateY(-8px);
+                border-color: #ffdefd;
+                box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
+                background: rgba(95, 153, 189, 0.95);
+            }
+            .about-me-box h2 {
+                font-family: 'Starborn', cursive;
+                font-size: 2.5rem;
+                color: white;
+                text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                margin-bottom: 20px;
+                letter-spacing: 2px;
+            }
+            .about-me-box p {
+                font-family: 'Segoe UI', system-ui, sans-serif;
+                font-size: 1.15rem;
+                line-height: 1.8;
+                color: #f0f4fa;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                margin-bottom: 15px;
+            }
+            .about-me-box .signature {
                 font-family: 'Your-Star', cursive;
                 font-size: 1.3rem;
-                font-weight: normal;
-                color: #bae0ff;
-                margin-top: 5px;
-                text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+                color: #ffdefd;
+                margin-top: 20px;
+                display: inline-block;
+                border-top: 2px solid rgba(220, 236, 255, 0.6);
+                padding-top: 15px;
             }
-            
             audio {
                 position: fixed;
                 bottom: 20px;
@@ -225,21 +288,57 @@
                 z-index: 999;
                 padding: 5px;
                 transition: all 0.3s ease;
+                border-radius: 30px;
+                background: rgba(0,0,0,0.3);
+                backdrop-filter: blur(4px);
             }
-            
-
-            
-
-            
-            h1, h2, h3, h4, h5, h6 {
-                margin: 0;
-                font-weight: normal;
+            @media (max-width: 700px) {
+                .about-me-box {
+                    padding: 25px 30px;
+                }
+                .about-me-box h2 {
+                    font-size: 1.8rem;
+                }
+                .about-me-box p {
+                    font-size: 0.95rem;
+                }
+                .about-me-box .signature {
+                    font-size: 1rem;
+                }
+                .float {
+                    gap: 35px;
+                }
+                .float a {
+                    font-size: 1.3rem;
+                }
+                .smooth-box {
+                    padding: 10px 20px;
+                    min-width: 260px;
+                }
+                .main-content {
+                    padding-top: 100px;
+                }
             }
-            
-
+            @media (max-width: 480px) {
+                .float {
+                    gap: 25px;
+                }
+                .float a {
+                    font-size: 1.1rem;
+                }
+                .smooth-box {
+                    padding: 8px 16px;
+                    border-radius: 40px;
+                }
+                .about-me-box {
+                    padding: 20px 20px;
+                }
+                .about-me-box h2 {
+                    font-size: 1.5rem;
+                }
+            }
         </style>
     </head>
-
     <body>
         <div class="page-container">
             
